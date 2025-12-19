@@ -4,6 +4,4 @@ MLG, Message Log Generator 는 로그의 몰입을 위해 메시지형 로그 ht
 
 Message 형태로 Log 를 생성하고 공유해 보세요.
 
-For SillyTavern and 깡통 (https://kkangtong.xyz)
-
-타사이트에 공유 금지.
+For SillyTavern and 깡통 (https://kkangtong.xyz) | 해당 웹 사이트 내에서만 즐겨주시기 바랍니다.
