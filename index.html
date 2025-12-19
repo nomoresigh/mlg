@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Log Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Newsreader:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <main class="app">
+        <header class="app__header">
+            <div>
+                <h1>Message Log Generator</h1>
+                <p class="app__subtitle">Build a chat, preview it, and copy standalone HTML.</p>
+            </div>
+            <div class="app__actions">
+                <label class="field field--inline">
+                    <span class="field__label">Style</span>
+                    <select id="style-select" class="field__control field__control--compact">
+                        <option value="imessage">iMessage</option>
+                        <option value="kakao">KakaoTalk</option>
+                        <option value="instagram">Instagram DM</option>
+                        <option value="twitter">Twitter DM</option>
+                        <option value="line">LINE</option>
+                    </select>
+                </label>
+                <button id="copy-export" class="btn btn--ghost">Copy export HTML</button>
+            </div>
+        </header>
+
+        <div class="layout">
+            <div class="stack">
+                <section class="panel">
+                    <div class="panel__header">
+                        <div>
+                            <h2>Sender avatars</h2>
+                            <p class="hint">Paste hosted URLs for crisp, portable exports.</p>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <label class="field">
+                            <span class="field__label">Me avatar URL</span>
+                            <input id="avatar-me" class="field__control" type="url" placeholder="https://...">
+                        </label>
+                        <label class="field">
+                            <span class="field__label">Them avatar URL</span>
+                            <input id="avatar-them" class="field__control" type="url" placeholder="https://...">
+                        </label>
+                    </div>
+                </section>
+
+                <section class="panel">
+                    <div class="panel__header">
+                        <h2>Messages</h2>
+                    </div>
+                    <div class="message-input-row">
+                        <label class="field field--inline">
+                            <span class="field__label">Sender</span>
+                            <select id="sender-select" class="field__control field__control--compact">
+                                <option value="me">Me</option>
+                                <option value="them">Them</option>
+                            </select>
+                        </label>
+                        <label class="field field--inline">
+                            <span class="field__label">Type</span>
+                            <select id="type-select" class="field__control field__control--compact">
+                                <option value="text">Text</option>
+                                <option value="image">Image</option>
+                            </select>
+                        </label>
+                        <input id="message-text" class="field__control field__control--grow" type="text"
+                            placeholder="Type a message">
+                        <input id="message-image" class="field__control field__control--grow" type="url"
+                            placeholder="Image URL (https://...)" style="display:none;">
+                        <button id="add-message" class="btn">Add</button>
+                    </div>
+                    <ul id="message-list" class="message-list"></ul>
+                </section>
+            </div>
+
+            <section class="panel preview-panel">
+                <div class="panel__header">
+                    <div>
+                        <h2>Preview</h2>
+                        <span class="hint">Rendered with the exact export HTML and sanitizer.</span>
+                    </div>
+                </div>
+                <div id="preview" class="preview"></div>
+                <div class="code-editor">
+                    <div class="code-editor__header">
+                        <div>
+                            <h3>Export HTML (live editable)</h3>
+                            <p class="hint">Edit below to customize; preview refreshes as you type.</p>
+                        </div>
+                        <div class="code-editor__actions">
+                            <button id="reset-html" class="btn btn--ghost">Reset to generated</button>
+                        </div>
+                    </div>
+                    <textarea id="html-editor" class="code-editor__input" spellcheck="false"></textarea>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
