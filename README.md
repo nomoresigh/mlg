@@ -1,6 +1,6 @@
 # MessageLogGenerator
 
-MLG, Message Log Generator 는 로그의 몰입을 위해 메시지형 로그 html / css 제작을 지원하는 템플릿입니다.
+MLG, Message Log Generator 는 몰입 있는 로그의 공유를 위해 메시지형 로그 html / css 제작을 지원하는 템플릿입니다.
 
 Message 형태로 Log 를 생성하고 공유해 보세요.
 
