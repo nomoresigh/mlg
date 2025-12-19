@@ -94,7 +94,7 @@ const baseCss = `
 .mlg-message { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5; width: 100%; }
 .mlg-message:last-child { margin-bottom: 0; }
 .mlg-message.mlg-me { flex-direction: row-reverse; }
-.mlg-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; background: #cbd5e1; border: 1px solid rgba(255, 255, 255, 0.12); flex: 0 0 36px; margin-top: 2px; }
+.mlg-avatar { width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 50%; object-fit: cover; object-position: center; background: #cbd5e1; border: 1px solid rgba(255, 255, 255, 0.12); flex: 0 0 36px; margin-top: 2px; aspect-ratio: 1 / 1; }
 .mlg-bubble { flex: 0 1 auto; width: auto; max-width: 80%; padding: 12px 15px; border-radius: var(--mlg-radius); background: var(--mlg-them-bg); color: var(--mlg-them-color); box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12); word-break: break-word; overflow-wrap: break-word; white-space: pre-wrap; border: var(--mlg-bubble-border, 1px solid rgba(0, 0, 0, 0.04)); }
 .mlg-message.mlg-me .mlg-bubble { background: var(--mlg-me-bg); color: var(--mlg-me-color); }
 .mlg-bubble a { color: inherit; text-decoration: underline; }
@@ -105,7 +105,7 @@ const baseCss = `
   .mlg { max-width: 100%; border-radius: 18px; padding: 14px 12px; }
   .mlg-message { gap: 8px; font-size: 14px; }
   .mlg-bubble { max-width: 85%; padding: 11px 13px; line-height: 1.45; }
-  .mlg-avatar { width: 32px; height: 32px; flex: 0 0 32px; }
+  .mlg-avatar { width: 32px; height: 32px; min-width: 32px; min-height: 32px; flex: 0 0 32px; aspect-ratio: 1 / 1; }
 }
 `;
 
